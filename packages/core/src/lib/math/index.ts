@@ -6,3 +6,4 @@
 
 export * from './category-theory';
 export * from './commutative-algebra';
+export * from './sheaf-theory';
