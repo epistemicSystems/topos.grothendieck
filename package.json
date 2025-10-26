@@ -1,0 +1,56 @@
+{
+  "name": "grothendieck-explorable",
+  "version": "0.1.0",
+  "description": "Explorable explanations for Grothendieck's revolutionary mathematics",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace=packages/core",
+    "build": "npm run build --workspaces",
+    "test": "npm run test --workspaces",
+    "lint": "eslint . --ext .ts,.tsx",
+    "format": "prettier --write \"**/*.{ts,tsx,md,json}\"",
+    "clean": "rm -rf node_modules packages/*/node_modules packages/*/dist",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.50.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-react": "^7.33.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "husky": "^8.0.0",
+    "lint-staged": "^15.0.0",
+    "prettier": "^3.0.0",
+    "typescript": "^5.2.0"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{md,json}": [
+      "prettier --write"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/epistemicSystems/topos.grothendieck"
+  },
+  "keywords": [
+    "mathematics",
+    "grothendieck",
+    "explorable-explanations",
+    "category-theory",
+    "algebraic-geometry",
+    "interactive-learning"
+  ],
+  "author": "Claude & Human Collaborators",
+  "license": "MIT"
+}
