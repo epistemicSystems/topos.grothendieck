@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* KaTeX styles */
+@import 'katex/dist/katex.css';
+
+/* Custom mathematical styles */
+.math-display {
+  @apply my-4 overflow-x-auto;
+}
+
+.math-inline {
+  @apply inline;
+}
+
+/* Interactive widget styles */
+.interactive-widget {
+  @apply border-2 border-gray-200 rounded-lg p-4;
+}
+
+.parameter-panel {
+  @apply bg-gray-50 p-4 rounded-lg;
+}
+
+/* Proof styles */
+.proof-step {
+  @apply border-l-4 border-blue-500 pl-4 py-2 mb-4;
+}
+
+.proof-justification {
+  @apply text-sm text-gray-600 italic;
+}
